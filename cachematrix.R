@@ -1,7 +1,6 @@
-##  Caching the inverse of matrices
+##  Functions for caching the inverse of matrices
 
 ## Create and set inverse of matrix
-
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
   set <- function(y) {
@@ -16,9 +15,7 @@ makeCacheMatrix <- function(x = matrix()) {
        getinv = getinv)
 }
 
-
 ## Fetch cached inverse matrix if it exists. Otherwise, compute the inverse.
-
 cacheSolve <- function(x, ...) {
   inv <- x$getinv()
   if(!is.null(inv)) {
